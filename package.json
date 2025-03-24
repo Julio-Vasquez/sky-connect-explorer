@@ -8,13 +8,15 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "test": "jest",
+    "test": "jest --clearCache & rm -rf coverage & jest",
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@vis.gl/react-google-maps": "^1.5.2",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-toastify": "^11.0.5",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
@@ -23,10 +25,12 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/testing-library__user-event": "^4.1.1",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
     "eslint-config-prettier": "^10.1.1",
