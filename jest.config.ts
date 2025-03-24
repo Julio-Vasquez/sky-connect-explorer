@@ -16,13 +16,14 @@ const config: Config = {
     '^@components/(.*)$': '<rootDir>/src/components/$1',
     '^@store/(.*)$': '<rootDir>/src/store/$1',
     '^@services/(.*)$': '<rootDir>/src/services/$1',
+    '^@lib/(.*)$': '<rootDir>/src/lib/$1',
   },
   // coverageThreshold: {
   //   global: {
-  //     branches: 85, // % mínimo de cobertura en branches (condiciones)
-  //     functions: 85, // % mínimo de cobertura en funciones
-  //     lines: 85, // % mínimo de cobertura en líneas
-  //     statements: 85, // % mínimo de cobertura en declaraciones
+  //     branches: 90, // % mínimo de cobertura en branches (condiciones)
+  //     functions: 90, // % mínimo de cobertura en funciones
+  //     lines: 90, // % mínimo de cobertura en líneas
+  //     statements: 90, // % mínimo de cobertura en declaraciones
   //   },
   // },
 }
