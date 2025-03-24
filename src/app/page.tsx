@@ -1,25 +1,24 @@
-import Image from 'next/image'
+import Link from 'next/link'
 
-import Title from '@components/Title'
-import SearchBar from '@components/SearchBar'
-import DarkModeToggle from '@components/DarkModeToggle'
+import HomeTemplate from '@components/templates/Home'
+import { fetchAirports } from '@services/fetchAirports'
 
-export default function Home() {
+/**
+ * Home page component.
+ *
+ * Fetches a list of airports and renders the `HomeTemplate` component to display the list.
+ * It also includes a link to view the full list of airports.
+ *
+ * @returns {JSX.Element} The rendered Home page.
+ */
+
+export default async function Home() {
+  const { data } = await fetchAirports(1, 100)
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Title />
-        <SearchBar />
-        <DarkModeToggle darkMode={false} setDarkMode={undefined} />
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-      </main>
+    <div className="w-full flex flex-col items-center gap-8">
+      <HomeTemplate data={data} />
+      <Link href="/airports">Listado completo</Link>
     </div>
   )
 }
