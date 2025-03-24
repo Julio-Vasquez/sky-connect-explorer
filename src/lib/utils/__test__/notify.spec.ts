@@ -1,5 +1,12 @@
 import { toast } from 'react-toastify'
-import { notify } from '@lib/utils/notify' // ajustá la ruta según tu proyecto
+
+import { notify } from '@lib/utils/notify'
+
+/**
+ * @file Tests for the fetchAirports service.
+ * @description Verifies that the fetchAirports function constructs the correct API URL
+ * and returns the parsed JSON response containing airport data and pagination metadata.
+ */
 
 jest.mock('react-toastify', () => ({
   toast: {

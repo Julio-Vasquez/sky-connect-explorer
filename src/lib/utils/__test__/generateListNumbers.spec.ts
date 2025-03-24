@@ -1,5 +1,10 @@
 import { generateListNumbers } from '@lib/utils/generateListNumbers'
 
+/**
+ * @file Tests for the generateListNumbers utility function.
+ * @description Verifies that the generateListNumbers function correctly generates a list of numbers based on provided options.
+ */
+
 describe('generateListNumbers', () => {
   test('should generate a sequence starting from 0 by default', () => {
     const result = generateListNumbers({ length: 5 })

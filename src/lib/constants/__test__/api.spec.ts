@@ -1,3 +1,8 @@
+/**
+ * @file Tests for the API Configuration.
+ * @description Verifies that the API_KEY and BASE_URL constants correctly retrieve their values from environment variables or use empty strings if undefined.
+ */
+
 describe('API Configuration', () => {
   const originalEnv = process.env
 

@@ -1,6 +1,11 @@
 import { getAirportById } from '@lib/utils/getAirportById'
 import type { Data } from '@services/fetchAirports'
 
+/**
+ * @file Tests for the getAirportById utility function.
+ * @description Verifies that the getAirportById function correctly retrieves an airport object from an array of airport data based on its ID.
+ */
+
 describe('getAirportById', () => {
   const mockData: Data[] = [
     {

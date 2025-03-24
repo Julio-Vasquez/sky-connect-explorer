@@ -1,5 +1,9 @@
-// generatePagination.test.ts
 import { generatePagination } from '@lib/utils/generatePagination'
+
+/**
+ * @file Tests for the generatePagination utility function.
+ * @description Verifies that the generatePagination function correctly generates pagination data based on the current page, total items, and limit.
+ */
 
 describe('generatePagination', () => {
   test('should return first page as active and include last page', () => {
